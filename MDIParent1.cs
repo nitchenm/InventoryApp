@@ -118,5 +118,11 @@ namespace InventoryApp
             Add_new_distributor add_New_Distributor = new Add_new_distributor();
             add_New_Distributor.Show();
         }
+
+        private void puchaseProductToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Purchase_product purchaseProduct = new Purchase_product();
+            purchaseProduct.Show();
+        }
     }
 }

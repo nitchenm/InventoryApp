@@ -80,6 +80,12 @@
     <Compile Include="Add_new_distributor.Designer.cs">
       <DependentUpon>Add_new_distributor.cs</DependentUpon>
     </Compile>
+    <Compile Include="Purchase_product.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase_product.Designer.cs">
+      <DependentUpon>Purchase_product.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase_product.resx">
+      <DependentUpon>Purchase_product.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Unit.resx">
       <DependentUpon>Unit.cs</DependentUpon>
