@@ -40,6 +40,7 @@
             this.addNewDistributorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip = new System.Windows.Forms.ToolTip(this.components);
             this.puchaseProductToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.purchaseFromDistributorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -90,7 +91,8 @@
             // 
             this.productToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.addProductNameToolStripMenuItem,
-            this.puchaseProductToolStripMenuItem});
+            this.puchaseProductToolStripMenuItem,
+            this.purchaseFromDistributorToolStripMenuItem});
             this.productToolStripMenuItem.Name = "productToolStripMenuItem";
             this.productToolStripMenuItem.Size = new System.Drawing.Size(61, 20);
             this.productToolStripMenuItem.Text = "Product";
@@ -124,6 +126,13 @@
             this.puchaseProductToolStripMenuItem.Text = "Puchase product";
             this.puchaseProductToolStripMenuItem.Click += new System.EventHandler(this.puchaseProductToolStripMenuItem_Click);
             // 
+            // purchaseFromDistributorToolStripMenuItem
+            // 
+            this.purchaseFromDistributorToolStripMenuItem.Name = "purchaseFromDistributorToolStripMenuItem";
+            this.purchaseFromDistributorToolStripMenuItem.Size = new System.Drawing.Size(209, 22);
+            this.purchaseFromDistributorToolStripMenuItem.Text = "Purchase from distributor";
+            this.purchaseFromDistributorToolStripMenuItem.Click += new System.EventHandler(this.purchaseFromDistributorToolStripMenuItem_Click);
+            // 
             // MDIParent1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -155,6 +164,7 @@
         private System.Windows.Forms.ToolStripMenuItem distributorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem addNewDistributorToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem puchaseProductToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem purchaseFromDistributorToolStripMenuItem;
     }
 }
 

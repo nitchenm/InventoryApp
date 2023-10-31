@@ -121,8 +121,14 @@ namespace InventoryApp
 
         private void puchaseProductToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Purchase_product purchaseProduct = new Purchase_product();
+            Add_Product_to_Distributor purchaseProduct = new Add_Product_to_Distributor();
             purchaseProduct.Show();
+        }
+
+        private void purchaseFromDistributorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Purchase_from_distributor pfd = new Purchase_from_distributor();
+            pfd.Show();
         }
     }
 }

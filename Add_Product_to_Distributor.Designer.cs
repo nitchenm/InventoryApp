@@ -1,6 +1,6 @@
 ﻿namespace InventoryApp
 {
-    partial class Purchase_product
+    partial class Add_Product_to_Distributor
     {
         /// <summary>
         /// Required designer variable.

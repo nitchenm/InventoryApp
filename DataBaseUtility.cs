@@ -120,5 +120,25 @@ namespace InventoryApp
             }
             return dataTable;
         }
+
+        public static void RemoveDuplicateItemsFromComboBox(ComboBox comboBox)
+        {
+            //HashSet to save unique elements
+            HashSet<string> uniqueItems = new HashSet<string>();
+
+            foreach (object item in comboBox.Items)
+            {
+                //checks if the element already exist in uniqueItems
+                if (!uniqueItems.Contains(item.ToString()))
+                {
+                    //If it doesnt, adds the element to the HashSet
+                    uniqueItems.Add(item.ToString());
+                }
+            }
+
+            comboBox.Items.Clear();
+            comboBox.Items.AddRange(uniqueItems.ToArray());
+        }
+
     }
 }

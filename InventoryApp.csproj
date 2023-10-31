@@ -80,11 +80,11 @@
     <Compile Include="Add_new_distributor.Designer.cs">
       <DependentUpon>Add_new_distributor.cs</DependentUpon>
     </Compile>
-    <Compile Include="Purchase_product.cs">
+    <Compile Include="Add_Product_to_Distributor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Purchase_product.Designer.cs">
-      <DependentUpon>Purchase_product.cs</DependentUpon>
+    <Compile Include="Add_Product_to_Distributor.Designer.cs">
+      <DependentUpon>Add_Product_to_Distributor.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -104,6 +104,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Purchase_from_distributor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Purchase_from_distributor.Designer.cs">
+      <DependentUpon>Purchase_from_distributor.cs</DependentUpon>
     </Compile>
     <Compile Include="Unit.cs">
       <SubType>Form</SubType>
@@ -131,8 +137,11 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Purchase_product.resx">
-      <DependentUpon>Purchase_product.cs</DependentUpon>
+    <EmbeddedResource Include="Add_Product_to_Distributor.resx">
+      <DependentUpon>Add_Product_to_Distributor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Purchase_from_distributor.resx">
+      <DependentUpon>Purchase_from_distributor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Unit.resx">
       <DependentUpon>Unit.cs</DependentUpon>

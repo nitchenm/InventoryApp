@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace InventoryApp
 {
-    public partial class Purchase_product : Form
+    public partial class Add_Product_to_Distributor : Form
     {
         
 
 
-        public Purchase_product()
+        public Add_Product_to_Distributor()
         {
             InitializeComponent();
         }
@@ -35,6 +35,32 @@ namespace InventoryApp
 
 
         }
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string productName = comboBox1.Text;
+            string productQty = textBox1.Text;
+            string distributorName = comboBox2.Text;
+            string productPrice = textBox2.Text;
+            string addingDate = dateTimePicker1.Text;
+
+            string addQuery = "INSERT INTO purchase_product (product_name, product_qty, product_price, purchase_date, distributor_name) VALUES (@product_name, @product_qty,@product_price,@purchase_date,@distributor_name)";
+            List<SqlParameter> parameters = new List<SqlParameter>
+            {
+                new SqlParameter ("@product_name",productName),
+                new SqlParameter ("@product_qty",productQty),
+                new SqlParameter ("@product_price",productPrice),
+                new SqlParameter ("@purchase_date",addingDate),
+                new SqlParameter ("@distributor_name",distributorName),
+            };
+
+            DataBaseUtility.ExecuteNonQuery(addQuery, parameters);
+
+            string updatequery = "SELECT * FROM purchase_product";
+
+            DataBaseUtility.FillDataGridView(dataGridView1, updatequery);
+
+        }
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -83,32 +109,6 @@ namespace InventoryApp
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            string productName = comboBox1.Text;
-            string productQty = textBox1.Text;
-            string distributorName = comboBox2.Text;
-            string productPrice = textBox2.Text;
-            string addingDate = dateTimePicker1.Text;
-
-            string addQuery = "INSERT INTO purchase_product (product_name, product_qty, product_price, purchase_date, distributor_name) VALUES (@product_name, @product_qty,@product_price,@purchase_date,@distributor_name)";
-            List<SqlParameter> parameters = new List<SqlParameter>
-            {
-                new SqlParameter ("@product_name",productName),
-                new SqlParameter ("@product_qty",productQty),
-                new SqlParameter ("@product_price",productPrice),
-                new SqlParameter ("@purchase_date",addingDate),
-                new SqlParameter ("@distributor_name",distributorName),
-            };
-
-            DataBaseUtility.ExecuteNonQuery(addQuery, parameters);
-
-            string updatequery = "SELECT * FROM purchase_product";
-
-            DataBaseUtility.FillDataGridView(dataGridView1, updatequery);
 
         }
 
